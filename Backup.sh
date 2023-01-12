@@ -26,6 +26,7 @@ if [ -z "${var_outputfile}" ]; then print_usage; fi
 # signin to 1Password
 echo "1Password Cloud Backup"
 echo "- signin to 1Password..."
+op account add --address $WEBSITE --email $EMAIL --secret-key $SECRET
 eval $(${tool_op} signin)
 
 # get a list of all items
